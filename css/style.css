@@ -34,15 +34,18 @@ body {
   margin: auto;
   align-items: center;
   justify-content: center;
+  background-color: rgba(201, 157, 202, 0.336);
 }
 .single-product {
   padding: 10px;
   transition: 0.6s;
+ 
 }
 .single-product:hover {
   box-shadow: 4px 4px 7px gray;
   border-radius: 10px;
   border: 1px solid cyan;
+  background-color: rgba(94, 177, 209, 0.342);
 }
 .product-image {
   width: 150px;

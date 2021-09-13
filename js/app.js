@@ -8,16 +8,17 @@ const loadProducts = () => {
 const showProducts = (products) => {
   const allProducts = products.map((pd) => pd);
   for (const product of allProducts) {
-    const image = product.images;
+    const image = product.image;
     const div = document.createElement("div");
     div.classList.add("product");
     div.innerHTML = `<div class="single-product">
       <div>
-    <img class="product-image" src="https://fakestoreapi.com/img/${image}.jpg"></img>
+      <img class="product-image" src=${image}></img>
+
       </div>
       <h3>${product.title}</h3>
       <p>Category: ${product.category}</p>
-      <p>Rating: ${product.rating.rate} Given by:${product.rating.count}People</p>
+      <h4>Rating:<i class="fas fa-star"></i> ${product.rating.rate} <br> Given by: <i class="fas fa-user"></i>  ${product.rating.count}People</h4>
       <h2>Price: $ ${product.price}</h2>
       
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
